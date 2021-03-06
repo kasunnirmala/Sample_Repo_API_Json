@@ -27,7 +27,7 @@ var data = "00000000000000440801" +
 (Math.round(speed).toString(16).padStart(4, '0')) +
 "000b040101f0015001150304423712180000430f6a44006803c700000055f10000a15610000284980001000050bc";
 console.log(data);
-client.connect(4444, '45.55.161.20', function() {
+client.connect(4445, '188.166.218.178', function() {
 	console.log('Connected');
 	client.write(Buffer.from('000F363739373435313232343534393035', 'hex'));
 	client.write(Buffer.from(data, 'hex'));
@@ -40,6 +40,6 @@ res.json({"message":data});
 // res.json({"message":""});
 });
 
-http.listen(2233, () => {
-  console.log('listening on *:2233');
+http.listen(2112, () => {
+  console.log('listening on *:2112');
 });
